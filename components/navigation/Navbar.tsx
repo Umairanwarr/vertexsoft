@@ -147,7 +147,7 @@ export default function Navbar() {
       >
         {/* Backdrop */}
         <div
-          className={`absolute inset-0 bg-slate-900/95 backdrop-blur-xl transition-opacity duration-500 ${
+          className={`absolute inset-0 bg-stone-900/20 backdrop-blur-md transition-opacity duration-500 ${
             isMobileMenuOpen ? "opacity-100" : "opacity-0"
           }`}
           onClick={() => setIsMobileMenuOpen(false)}
@@ -155,7 +155,7 @@ export default function Navbar() {
 
         {/* Menu Content */}
         <div
-          className={`absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-slate-900 to-slate-900/95 transition-all duration-500 ${
+          className={`absolute top-0 left-0 right-0 h-full bg-white transition-all duration-500 ${
             isMobileMenuOpen
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-y-full"
@@ -170,7 +170,7 @@ export default function Navbar() {
               <span className="text-xl font-bold text-foreground">VertexSoft</span>
             </a>
             <button
-              className="p-3 bg-slate-800/80 backdrop-blur-sm border border-slate-700/50 rounded-xl text-stone-600 hover:text-coral-600 transition-all duration-300"
+              className="p-3 bg-stone-100 border border-stone-200/50 rounded-xl text-stone-600 hover:text-coral-600 transition-all duration-300"
               onClick={() => setIsMobileMenuOpen(false)}
               aria-label="Close menu"
             >
@@ -197,7 +197,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center justify-between px-5 py-4 text-xl font-medium text-stone-600 hover:text-coral-600 hover:bg-slate-800/50 rounded-xl transition-all duration-300 group/mobile"
+                className="flex items-center justify-between px-5 py-4 text-xl font-medium text-stone-700 hover:text-coral-600 hover:bg-stone-50 rounded-xl transition-all duration-300 group/mobile"
                 style={{
                   transitionDelay: `${index * 100}ms`,
                   opacity: isMobileMenuOpen ? 1 : 0,
@@ -205,9 +205,9 @@ export default function Navbar() {
                 }}
               >
                 {item.name}
-                <span className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center group-hover/mobile:bg-coral-500/20 transition-colors duration-300">
+                <span className="w-10 h-10 bg-stone-100 rounded-lg flex items-center justify-center group-hover/mobile:bg-coral-500/10 transition-colors duration-300">
                   <svg
-                    className="w-5 h-5 text-stone-500 group-hover/mobile:text-coral-400 transition-colors duration-300"
+                    className="w-5 h-5 text-stone-400 group-hover/mobile:text-coral-600 transition-colors duration-300"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
